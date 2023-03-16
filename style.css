@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+  min-height: 100vh;
+  text-align: center;
+  color: #34355B;
+  background-size: 200% 200%;
+  animation: gradient 10s infinite ease;
+}
+
+.hide {
+  display: none;
+}
+
+.screenOne {
+  background: #FFF;
+  width: min(42.8rem, 90%);
+  height: 42.4rem;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+}
+
+.screenOne h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  margin-bottom: 1.4rem;
+  font-weight: 700;
+}
+
+.screenOne p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  margin-bottom: 2.0rem;
+}
+
+.screenOne img {
+  width: 26.5rem;
+  height: 20.0rem;
+}
+
+.screenOne img:hover {
+  animation: shaking .2s infinite;
+}
+
+.screenTwo {
+  background: #FFFFFF;
+  width: min(42.8rem, 90%);
+  height: 54.2rem;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  padding: 4.8rem 6.4rem;
+}
+
+.screenTwo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  margin-bottom: 11.1rem;
+  font-weight: 700;
+}
+
+.screenTwo p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  position: absolute;
+  z-index: 0;
+  background: #E4EDF1;
+  padding: 1.0rem;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+  animation: downtop 1s ease-out forwards;
+  width: 29.3rem;
+}
+
+.screenTwo img {
+  width: 30.0rem;
+  height: 20.0rem;
+  margin-bottom: 1.7rem;
+}
+
+.screenTwo button {
+  border: none;
+  border-radius: .4rem;
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  padding: 1.6rem;
+  background: #FF9500;
+  transition: .5s;
+}
+
+.screenTwo button:hover {
+  background: #e78b0b;
+}
+
+@keyframes shaking {
+  0% {
+    margin-left: 0;
+    transform: rotate(10deg);
+  }
+
+  25% {
+    margin-left: .7rem;
+    
+  }
+
+  50% {
+    margin-left: 0;
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    margin-left: -.7rem;
+  }
+
+  100% {
+    margin-left: 0;
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    margin-top: 7.0rem;
+    scale: 0.1;
+  }
+
+  100% {
+    margin-top: -7rem;
+    scale: 1;
+  }
+}
+
+/* TENTATIVA DE ANIMAÇÃO FEITA POR MIM, QUE NÃO DEU MUITO CERTO MAS FOI FEITA DO ZERO */
+/* @keyframes background {
+  0% {
+    background: linear-gradient(45deg, #190361 0%, #BB00FF 100%)
+  }
+
+  25% {
+    background: linear-gradient(45deg, #BB00FF 0%, #2e003f 100%)
+  }
+
+  50% {
+    background: linear-gradient(45deg, #2e003f 0%, #600868 100%)
+  }
+
+  75% {
+    background: linear-gradient(45deg, #600868 0%, #dc4ee9 100%)
+  }
+
+  100% {
+    background: linear-gradient(45deg, #dc4ee9 0%, #190361 100%)
+  }
+} */
+
+
+/* ANIMAÇÃO USADA NA APLICAÇÃO, PORÉM FOI RETIRADA DO PRÓPRIO DESAFIO DA ROCKETSEAT. */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
